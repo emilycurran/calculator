@@ -2,8 +2,41 @@
 <html lang="en">
   <head>
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@700&display=swap" rel="stylesheet"> 
+    <title>myCalc</title>
   </head>
   <body>
-    <script src="script.js"></script>
+    <div id="calculator">
+      <div id="display">
+        <div id="user-input"></div>
+        <div id="output"></div>
+      </div>
+
+      <div id="buttons">
+        <button id="left-bracket" class="button string-input" data-color="rgb(144, 187, 255)">(</button>
+        <button id="right-bracket" class="button string-input" data-color="rgb(144, 187, 255)">)</button>
+        <button id="clr" class="button" data-color="rgb(255, 120, 120)">CLR</button>
+        <button id="answer" class="button" data-color="rgb(219, 149, 219)">ANS</button>
+        <button id="seven" class="button string-input" data-color="white">7</button>
+        <button id="eight" class="button string-input" data-color="white">8</button>
+        <button id="nine" class="button string-input" data-color="white">9</button>
+        <button id="buttonide" class="button string-input" data-color="rgb(240, 190, 96)">/</button>
+        <button id="four" class="button string-input" data-color="white">4</button>
+        <button id="five" class="button string-input" data-color="white">5</button>
+        <button id="six" class="button string-input" data-color="white">6</button>
+        <button id="mulitply" class="button string-input" data-color="rgb(240, 190, 96)">*</button>
+        <button id="one" class="button string-input" data-color="white">1</button>
+        <button id="two" class="button string-input" data-color="white">2</button>
+        <button id="three" class="button string-input" data-color="white">3</button>
+        <button id="-" class="button string-input" data-color="rgb(240, 190, 96)">-</button>
+        <button id="one" class="button string-input" data-color="white">0</button>
+        <button id="point" class="button string-input" data-color="white">.</button>
+        <button id="equals" class="button" data-color="rgb(128, 216, 128)">=</button>
+        <button id="plus" class="button string-input" data-color="rgb(240, 190, 96)">+</button>
+      </div>
+
+      <script src="script.js"></script>
+    </div>
   </body>
 </html>
