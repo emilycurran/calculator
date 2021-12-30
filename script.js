@@ -11,6 +11,9 @@ class Calculator {
                 indexLeftBracket = i;
            } 
            if(inputString[i] == ")"){
+               if(indexLeftBracket == null){
+                    return NaN;
+               }
                indexRightBracket = i;
                let leftString = inputString.substring(0, indexLeftBracket);
                let middleString = inputString.substring(indexLeftBracket+1, indexRightBracket);
@@ -52,7 +55,11 @@ class Calculator {
             }
         }
 
-        return parseFloat(inputString);
+        if(inputString == ""){
+            return inputString;
+        }else{
+            return parseFloat(inputString);
+        }
     }
 
     updateUserInput(text){
@@ -63,14 +70,16 @@ class Calculator {
     }
 
     formatAnswer(ans){
-        console.log(ans);
         let ret = "";
 
-        if(ans == Infinity){
+        if(ans == ""){
+            ret = "";
+            this.lastAnswer = "";
+        }
+        else if(ans == Infinity){
             ret = "zero division error";
             this.lastAnswer = "";
         }else if(Number.isNaN(ans)){
-            console.log("here");
             ret = "syntax error";
             this.lastAnswer = "";
         }else{
@@ -142,20 +151,24 @@ document.addEventListener('keydown', function (event) {
     for(let i=0; i<textButtons.length; i++){
         if(event.key == textButtons[i].innerText){
             event.preventDefault();
+            event.preventDefault();
             textButtons[i].click();
         }
     }
 
     if (event.key === 'Backspace') {
+        event.preventDefault();
         clr.click();
     }
 
     if (event.key === 'Enter' || event.key === '='){
+        event.preventDefault();
         equals.click();
     }
 
     if(event.key === 'a' ){
-        ans.click();56
+        event.preventDefault();
+        ans.click();
     }
 
 });
