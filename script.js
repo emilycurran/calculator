@@ -135,6 +135,8 @@ buttons.forEach(button => button.addEventListener('mouseout', function(){
 //adding keyboard functionality 
 
 document.addEventListener('keydown', function (event) {
+    event.preventDefault();
+
     //add key bindings for standard keys
     for(let i=0; i<textButtons.length; i++){
         if(event.key == textButtons[i].innerText){
