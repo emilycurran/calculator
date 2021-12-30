@@ -151,8 +151,7 @@ document.addEventListener('keydown', function (event) {
     }
 
     if(event.key === 'a' ){
-        ans.click();
+        ans.click();56
     }
 
 });
-
