@@ -63,12 +63,14 @@ class Calculator {
     }
 
     formatAnswer(ans){
+        console.log(ans);
         let ret = "";
 
         if(ans == Infinity){
             ret = "zero division error";
             this.lastAnswer = "";
-        }else if(ans == "NaN"){
+        }else if(Number.isNaN(ans)){
+            console.log("here");
             ret = "syntax error";
             this.lastAnswer = "";
         }else{
@@ -135,11 +137,11 @@ buttons.forEach(button => button.addEventListener('mouseout', function(){
 //adding keyboard functionality 
 
 document.addEventListener('keydown', function (event) {
-    event.preventDefault();
 
     //add key bindings for standard keys
     for(let i=0; i<textButtons.length; i++){
         if(event.key == textButtons[i].innerText){
+            event.preventDefault();
             textButtons[i].click();
         }
     }
