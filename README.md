@@ -1,1 +1,1 @@
-#Calculator
+Simple calculator with keyboard integration and ability to parse simple order or operation expressions. Built using html, css and javascript. View the live here ![here](https://spacebungalow.github.io/calculator/).
